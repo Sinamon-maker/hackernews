@@ -1,0 +1,58 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.container {
+  width: 70vh;
+  margin: 0 auto;
+}
+
+/*buttons */
+.btn-primary {
+  background-color: rgb(68, 185, 214);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+}
+
+.btn-primary:hover {
+  background-color: rgb(75, 190, 219);
+}
+
+.btn-secondary {
+  background-color: rgb(189, 58, 58);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
+.btn-secondary:hover {
+  background-color: rgb(199, 68, 68);
+}
+
+.btn-project {
+  background-color: white;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+  text-align: left;
+}
+
+.btn-project:hover {
+  background-color: rgb(247, 250, 250);
+}
+
+/*lists*/
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-item {
+  margin-bottom: 1rem;
+}
