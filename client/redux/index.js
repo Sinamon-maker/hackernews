@@ -1,37 +1,36 @@
 import { createStore, applyMiddleware, compose } from "redux"
+import { routerMiddleware } from 'connected-react-router'
 import { composeWithDevTools } from 'redux-devtools-extension'
-import { io } from "socket.io-client";
-import CreateSagaMiddleware from 'redux-saga'
- import thunk from 'redux-thunk'
+//import { io } from "socket.io-client";
+import thunk from 'redux-thunk'
 import createRootReducer from './reducers'
-import {sagaWatcher} from './sagas'
 
-const saga = CreateSagaMiddleware()
-const middleware = [thunk]
+import history from './history'
+
+const middleware = [thunk, routerMiddleware(history)]
 const initialState = {}
 
 const composeFunc = process.env.NODE_ENV === 'development' ? composeWithDevTools : compose
-const composedEnchanters = composeFunc(applyMiddleware(...middleware, saga))
-const store = createStore(createRootReducer(), initialState, composedEnchanters)
-
-saga.run(sagaWatcher)
-
-const socket = io('/');
-
-socket.on("connect", () => {
-
-  console.log("hi", );
+const composedEnchanters = composeFunc(applyMiddleware(...middleware))
+const store = createStore(createRootReducer(history), initialState, composedEnchanters)
 
 
- });
+// const socket = io('/');
 
-socket.on('action', function (data) {
-  console.log('connected');
- store.dispatch(data)
-})
+// socket.on("connect", () => {
 
-export function getSocket(){
-  return socket
-}
+//console.log("hi",);
+
+
+//});
+
+//socket.on('action', function (data) {
+// console.log('connected');
+// store.dispatch(data)
+//})
+
+//export function getSocket() {
+//  return socket
+//}
 
 export default store

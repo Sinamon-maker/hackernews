@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router } from "react-router-dom";
+import { AppContainer } from "react-hot-loader";
+
 import "./main.scss";
 import Root from "./components/Root";
 
 ReactDOM.render(
-  <Router>
+  <AppContainer>
     <Root />
-  </Router>,
+  </AppContainer>,
   document.getElementById("root")
 );

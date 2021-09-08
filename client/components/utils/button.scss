@@ -1,0 +1,37 @@
+/*buttons */
+.btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+.btn-primary {
+  background-color: rgb(15, 17, 17);
+  color: white;
+  padding: 1.5rem 1rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  border: 1px solid whitesmoke;
+}
+
+.btn-primary:hover {
+  background-color: rgb(46, 47, 48);
+  opacity: 0.8;
+}
+
+.btn-secondary {
+  background-color: rgb(121, 114, 114);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-secondary:hover {
+  background-color: rgb(90, 82, 82);
+}

@@ -1,9 +1,10 @@
 import React from "react";
+import "./button.scss";
 
-const Button = ({ validate }) => {
+const Button = ({ title, onClick }) => {
   return (
-    <button className="btn btn-primary" type="submit" disabled={!validate}>
-      SEND
+    <button className="btn btn-primary" type="button" onClick={onClick}>
+      {title}
     </button>
   );
 };
