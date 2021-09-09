@@ -2,7 +2,7 @@ import React from "react";
 import store from "../redux";
 import { Provider } from "react-redux";
 import { ConnectedRouter } from "connected-react-router";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import history from "./../redux/history";
 
 import App from "./App";
@@ -22,6 +22,7 @@ const Root = () => {
             <Route exact path="/news/:id">
               <ItemNews />
             </Route>
+            <Redirect from="/" exact to="/news" />
           </Switch>
         </div>
       </ConnectedRouter>

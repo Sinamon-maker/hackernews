@@ -17,7 +17,7 @@ const config = {
   devServer: {
     hot: true,
     contentBase: resolve(__dirname, 'dist'),
-    port: 3080,
+    port: 3000,
     host: 'localhost',
     index: 'index.html',
     historyApiFallback: true,
