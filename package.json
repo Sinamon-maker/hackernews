@@ -10,7 +10,7 @@
     "dev:watch": "webpack-dev-server --config webpack.dev.config.js",
     "dev:server": "webpack  --watch --config webpack.dev.config.js",
     "watch:server": "nodemon --legacy-watch server/server.js --watch server --watch client --exec",
-    "start": "npm run watch:server & npm run dev:watch "
+    "dev": "yarn run watch:server & yarn run dev:watch "
   },
   "dependencies": {
     "@babel/core": "^7.12.3",
